@@ -53,6 +53,8 @@ export default css`
   }
 
   input[type='radio'] {
+    height: 16px;
+    width: 16px;
     margin-right: 8px;
     position: relative;
     display: inline-block;
