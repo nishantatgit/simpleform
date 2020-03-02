@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 export default function Input(props) {
   const {
@@ -7,8 +7,6 @@ export default function Input(props) {
     id,
     onChange,
     onBlur,
-    initialValue = '',
-    className,
     name,
     value,
     hasError,
@@ -20,7 +18,7 @@ export default function Input(props) {
   };
 
   return (
-    <div className="input-group">
+    <>
       <label htmlFor={id}>{label}</label>
       <input
         id={id}
@@ -33,6 +31,6 @@ export default function Input(props) {
         placeholder={placeholder}
         aria-invalid={hasError}
       />
-    </div>
+    </>
   );
 }

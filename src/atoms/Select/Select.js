@@ -1,17 +1,7 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 export default function Select(props) {
   const { options, label, id, onChange, name, value, onBlur } = props;
-  //const [selectedValue, setSelectedValue] = useState('select');
-  // const onChangeHandler = e => {
-  //  // setSelectedValue(e.target.value);
-  //  // console.log('selectedValue', e.target.value);
-  //   onChange && onChange();
-  // };
-  // function onBlur() {
-  //   console.log('on blur called');
-  //   handleBlur();
-  // }
 
   return (
     <>

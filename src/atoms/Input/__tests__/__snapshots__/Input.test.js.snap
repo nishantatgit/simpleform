@@ -4,25 +4,65 @@ exports[`<Input /> should render correctly 1`] = `
 initialize {
   "0": Object {
     "attribs": Object {
-      "class": "input-group",
+      "for": "first-name",
     },
     "children": Array [
       Object {
-        "attribs": Object {
-          "for": "first-name",
-        },
+        "data": "First Name",
+        "next": null,
+        "parent": [Circular],
+        "prev": null,
+        "type": "text",
+      },
+    ],
+    "name": "label",
+    "namespace": "http://www.w3.org/1999/xhtml",
+    "next": Object {
+      "attribs": Object {
+        "id": "first-name",
+        "name": "firstName",
+        "type": "text",
+      },
+      "children": Array [],
+      "name": "input",
+      "namespace": "http://www.w3.org/1999/xhtml",
+      "next": null,
+      "parent": null,
+      "prev": [Circular],
+      "root": Object {
+        "attribs": Object {},
         "children": Array [
-          Object {
-            "data": "First Name",
-            "next": null,
-            "parent": [Circular],
-            "prev": null,
-            "type": "text",
-          },
+          [Circular],
+          [Circular],
         ],
-        "name": "label",
+        "name": "root",
         "namespace": "http://www.w3.org/1999/xhtml",
-        "next": Object {
+        "next": null,
+        "parent": null,
+        "prev": null,
+        "type": "root",
+        "x-attribsNamespace": Object {},
+        "x-attribsPrefix": Object {},
+      },
+      "type": "tag",
+      "x-attribsNamespace": Object {
+        "id": undefined,
+        "name": undefined,
+        "type": undefined,
+      },
+      "x-attribsPrefix": Object {
+        "id": undefined,
+        "name": undefined,
+        "type": undefined,
+      },
+    },
+    "parent": null,
+    "prev": null,
+    "root": Object {
+      "attribs": Object {},
+      "children": Array [
+        [Circular],
+        Object {
           "attribs": Object {
             "id": "first-name",
             "name": "firstName",
@@ -32,8 +72,9 @@ initialize {
           "name": "input",
           "namespace": "http://www.w3.org/1999/xhtml",
           "next": null,
-          "parent": [Circular],
+          "parent": null,
           "prev": [Circular],
+          "root": [Circular],
           "type": "tag",
           "x-attribsNamespace": Object {
             "id": undefined,
@@ -46,28 +87,80 @@ initialize {
             "type": undefined,
           },
         },
-        "parent": [Circular],
-        "prev": null,
-        "type": "tag",
-        "x-attribsNamespace": Object {
-          "for": undefined,
-        },
-        "x-attribsPrefix": Object {
-          "for": undefined,
-        },
+      ],
+      "name": "root",
+      "namespace": "http://www.w3.org/1999/xhtml",
+      "next": null,
+      "parent": null,
+      "prev": null,
+      "type": "root",
+      "x-attribsNamespace": Object {},
+      "x-attribsPrefix": Object {},
+    },
+    "type": "tag",
+    "x-attribsNamespace": Object {
+      "for": undefined,
+    },
+    "x-attribsPrefix": Object {
+      "for": undefined,
+    },
+  },
+  "1": Object {
+    "attribs": Object {
+      "id": "first-name",
+      "name": "firstName",
+      "type": "text",
+    },
+    "children": Array [],
+    "name": "input",
+    "namespace": "http://www.w3.org/1999/xhtml",
+    "next": null,
+    "parent": null,
+    "prev": Object {
+      "attribs": Object {
+        "for": "first-name",
       },
-      Object {
-        "attribs": Object {
-          "id": "first-name",
-          "name": "firstName",
+      "children": Array [
+        Object {
+          "data": "First Name",
+          "next": null,
+          "parent": [Circular],
+          "prev": null,
           "type": "text",
         },
-        "children": Array [],
-        "name": "input",
+      ],
+      "name": "label",
+      "namespace": "http://www.w3.org/1999/xhtml",
+      "next": [Circular],
+      "parent": null,
+      "prev": null,
+      "root": Object {
+        "attribs": Object {},
+        "children": Array [
+          [Circular],
+          [Circular],
+        ],
+        "name": "root",
         "namespace": "http://www.w3.org/1999/xhtml",
         "next": null,
-        "parent": [Circular],
-        "prev": Object {
+        "parent": null,
+        "prev": null,
+        "type": "root",
+        "x-attribsNamespace": Object {},
+        "x-attribsPrefix": Object {},
+      },
+      "type": "tag",
+      "x-attribsNamespace": Object {
+        "for": undefined,
+      },
+      "x-attribsPrefix": Object {
+        "for": undefined,
+      },
+    },
+    "root": Object {
+      "attribs": Object {},
+      "children": Array [
+        Object {
           "attribs": Object {
             "for": "first-name",
           },
@@ -83,8 +176,9 @@ initialize {
           "name": "label",
           "namespace": "http://www.w3.org/1999/xhtml",
           "next": [Circular],
-          "parent": [Circular],
+          "parent": null,
           "prev": null,
+          "root": [Circular],
           "type": "tag",
           "x-attribsNamespace": Object {
             "for": undefined,
@@ -93,27 +187,6 @@ initialize {
             "for": undefined,
           },
         },
-        "type": "tag",
-        "x-attribsNamespace": Object {
-          "id": undefined,
-          "name": undefined,
-          "type": undefined,
-        },
-        "x-attribsPrefix": Object {
-          "id": undefined,
-          "name": undefined,
-          "type": undefined,
-        },
-      },
-    ],
-    "name": "div",
-    "namespace": "http://www.w3.org/1999/xhtml",
-    "next": null,
-    "parent": null,
-    "prev": null,
-    "root": Object {
-      "attribs": Object {},
-      "children": Array [
         [Circular],
       ],
       "name": "root",
@@ -127,14 +200,18 @@ initialize {
     },
     "type": "tag",
     "x-attribsNamespace": Object {
-      "class": undefined,
+      "id": undefined,
+      "name": undefined,
+      "type": undefined,
     },
     "x-attribsPrefix": Object {
-      "class": undefined,
+      "id": undefined,
+      "name": undefined,
+      "type": undefined,
     },
   },
   "_root": [Circular],
-  "length": 1,
+  "length": 2,
   "options": Object {
     "decodeEntities": true,
     "normalizeWhitespace": false,

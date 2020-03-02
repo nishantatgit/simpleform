@@ -13,6 +13,6 @@ describe('validatePattern', () => {
   });
 
   it('should thorw error if pattern is not regex', () => {
-    expect(() => validatePattern('pattern', 'First-Name')).toThrow(Error);
+    expect(() => validatePattern('pattern', 'First-ntName')).toThrow(Error);
   });
 });
