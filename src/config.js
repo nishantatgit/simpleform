@@ -70,20 +70,6 @@ const formFields = [
   },
 ];
 
-const pattern = {
-  firstName: /^[a-zA-Z\-']+( [a-zA-Z\-']+)*$/,
-  lastName: /^[a-zA-Z\-']+( [a-zA-Z\-']+)*$/,
-};
-
-const lengthConstraint = {
-  firstName: {
-    max: 15,
-  },
-  lastName: {
-    max: 15,
-  },
-};
-
 const formConfig = {
   firstName: {
     pattern: /^[a-zA-Z\-']+( [a-zA-Z\-']+)*$/,
@@ -105,13 +91,18 @@ const formConfig = {
       maxLength: 'Must be 15 characters or less',
     },
   },
+  changeName: {
+    error: {
+      required,
+    },
+  },
   title: {
     error: {
       required,
     },
   },
   dateOfBirth: {
-    pattern: /\d{2}-\d{2}-\d{4}/,
+    pattern: /^\d{2}-\d{2}-\d{4}$/,
     error: {
       patternMismatch: 'Date must be in format DD-MM-YYYY',
       invalid: 'Invalid Date',
@@ -119,4 +110,4 @@ const formConfig = {
   },
 };
 
-export { pattern, lengthConstraint, formConfig };
+export { formConfig };

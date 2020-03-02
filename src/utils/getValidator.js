@@ -1,4 +1,4 @@
-import { pattern, lengthConstraint, formConfig } from '../config';
+import { formConfig } from '../config';
 import validatePattern from './validatePattern';
 
 export default function() {
@@ -6,36 +6,30 @@ export default function() {
     const errors = {};
     const { firstName, lastName, title, dateOfBirth, changeName } = values;
 
-    const namePatternError =
-      'Please enter your name using letters (hyphens, apostrophes and single space is accepted)';
-
-    const requiredError = 'Required';
-    const lengthError = 'Must be 15 characters or less';
-
     if (!firstName) {
-      errors.firstName = requiredError;
-    } else if (firstName.length > lengthConstraint.firstName.max) {
-      errors.firstName = lengthError;
-    } else if (!validatePattern(pattern.firstName, firstName)) {
-      errors.firstName = namePatternError;
+      errors.firstName = formConfig.firstName.error.required;
+    } else if (firstName.length > formConfig.firstName.maxLength) {
+      errors.firstName = formConfig.firstName.error.maxLength;
+    } else if (!validatePattern(formConfig.firstName.pattern, firstName)) {
+      errors.firstName = formConfig.firstName.error.patternMismatch;
     }
 
     if (!lastName) {
-      errors.lastName = requiredError;
-    } else if (values.lastName.length > lengthConstraint.lastName.max) {
-      errors.lastName = lengthError;
-    } else if (!validatePattern(pattern.lastName, lastName)) {
-      errors.lastName = namePatternError;
+      errors.lastName = formConfig.lastName.error.required;
+    } else if (values.lastName.length > formConfig.lastName.maxLength) {
+      errors.lastName = formConfig.lastName.error.maxLength;
+    } else if (!validatePattern(formConfig.lastName.pattern, lastName)) {
+      errors.lastName = formConfig.firstName.error.patternMismatch;
     }
 
     if (!title) {
-      errors.title = requiredError;
+      errors.title = formConfig.title.error.required;
     }
 
     if (dateOfBirth) {
-      const datePattern = /\d{2}-\d{2}-\d{4}/;
+      const datePattern = formConfig.dateOfBirth.pattern;
       if (!datePattern.test(values.dateOfBirth)) {
-        errors.dateOfBirth = 'Date must be in format DD-MM-YYYY';
+        errors.dateOfBirth = formConfig.dateOfBirth.error.patternMismatch;
       } else {
         const dob = new Date(
           dateOfBirth
@@ -44,13 +38,13 @@ export default function() {
             .join('-')
         );
         if (Number.isNaN(dob.getDate())) {
-          errors.dateOfBirth = 'Invalid Date';
+          errors.dateOfBirth = formConfig.dateOfBirth.error.invalid;
         }
       }
     }
 
     if (!changeName) {
-      errors.changeName = requiredError;
+      errors.changeName = formConfig.changeName.error.required;
     }
     return errors;
   };
