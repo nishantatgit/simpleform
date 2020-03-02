@@ -39,6 +39,12 @@ export default css`
     width: 100%;
     padding: 10px 8px;
     border: 1px solid grey;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 125.304 125.304"><path d="M62.652 103.895L0 21.41h125.304" fill="%23343334"/></svg>');
+    background-repeat: no-repeat;
+    background-size: 16px;
+    background-position: center right 8px;
+    background-color: transparent;
+    border-radius: 0;
   }
 
   input[type='radio'] {
@@ -73,6 +79,7 @@ export default css`
     display: flex;
     justify-content: center;
     cursor: pointer;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   }
 
   fieldset {
